@@ -4,6 +4,7 @@ about: This checklist tracks tasks and repo releases for a Knative release.
 title: "Release v1.XX"
 assignees: knative-release-leads
 ---
+
 Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELINE.md) document prior to starting the release
 
 ### T-minus 30 days
@@ -12,9 +13,11 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
   - See workflow to check rollout: [![Owner Workflow](https://github.com/knative/release/actions/workflows/check-owners.yaml/badge.svg)](https://github.com/knative/release/actions/workflows/check-owners.yaml)
 
 ### T-minus 14 days
+
 - [ ] Update release version in the following workflows
-	- [ ]  Releasability  (see: [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#updating-the-releasability-defaults))
-	- [ ] Update Dependency  (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#bump-dependencies-in-auto-update-job))
+
+  - [ ] Releasability (see: [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#updating-the-releasability-defaults))
+  - [ ] Update Dependency (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#bump-dependencies-in-auto-update-job))
 
 - [ ] An announcement has been made in the [**#knative**](https://app.slack.com/client/T08PSQ7BQ/C04LGHDR9K7) Slack channel that [`knative.dev/pkg`](https://github.com/knative/pkg) will be released in a week
 
@@ -46,60 +49,63 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 
 ### T-minus 1 day
 
- - [ ] Obtained ACK from each [working group lead](https://github.com/knative/community/blob/main/working-groups/WORKING-GROUPS.md) that the release is imminent and is green-lighted
- - [ ] A re-check of the nightly releases status and notify [working group leads](https://github.com/knative/community/blob/main/working-groups/WORKING-GROUPS.md) of failures
+- [ ] Obtained ACK from each [working group lead](https://github.com/knative/community/blob/main/working-groups/WORKING-GROUPS.md) that the release is imminent and is green-lighted
+- [ ] A re-check of the nightly releases status and notify [working group leads](https://github.com/knative/community/blob/main/working-groups/WORKING-GROUPS.md) of failures
 
 ### Release Day(s)
+
 - Review the [PROCEDURE](https://github.com/knative/release/blob/main/PROCEDURES.md#releasing-a-repository) on how to release a repo.
+
 #### Phase 1 - Core Repositories _(Can be started after all the supporting repos have been successfully released)_
+
 - [knative/serving](https://github.com/knative/serving)
   - [ ] Dependencies up to date - [![releasabilty][serving-release-badge]][serving-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][serving-prow-badge]][serving-prow-job]
+    - Prow Release Job [![Prow][serving-prow-badge]][serving-prow-job]
     - Latest Version [![Releases][serving-version-badge]][serving-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative/eventing](https://github.com/knative/eventing)
   - [ ] Dependencies up to date - [![releasabilty][eventing-release-badge]][eventing-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-      - Prow Release Job [![Prow][eventing-prow-badge]][eventing-prow-job]
-	  - Latest Version [![Releases][eventing-version-badge]][eventing-release-page]
+    - Prow Release Job [![Prow][eventing-prow-badge]][eventing-prow-job]
+    - Latest Version [![Releases][eventing-version-badge]][eventing-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/net-certmanager](https://github.com/knative-sandbox/net-certmanager)
   - [ ] Dependencies up to date - [![releasabilty][net-certmanager-release-badge]][net-certmanager-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-      - Prow Release [![Prow][net-certmanager-prow-badge]][net-certmanager-prow-job]
-	  - Latest Version [![Releases][net-certmanager-version-badge]][net-certmanager-release-page]
+    - Prow Release [![Prow][net-certmanager-prow-badge]][net-certmanager-prow-job]
+    - Latest Version [![Releases][net-certmanager-version-badge]][net-certmanager-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/net-contour](https://github.com/knative-sandbox/net-contour)
   - [ ] Dependencies up to date - [![releasabilty][net-contour-release-badge]][net-contour-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-     - Prow Release [![Releases][net-contour-prow-badge]][net-contour-prow-job]
-	 - Latest Version [![Releases][net-contour-version-badge]][net-contour-release-page]
+    - Prow Release [![Releases][net-contour-prow-badge]][net-contour-prow-job]
+  - Latest Version [![Releases][net-contour-version-badge]][net-contour-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/net-gateway-api](https://github.com/knative-sandbox/net-gateway-api)
   - [ ] Dependencies up to date - [![releasabilty][net-gateway-api-release-badge]][net-gateway-api-release-workflow]
   - [ ] Branch Cut
   - [ ] Release https://app.slack.com/client/T08PSQ7BQ/C050X5BGNNS
     - Prow Release [![Releases][net-gateway-api-prow-badge]][net-gateway-api-prow-job]
-	 - Latest Version [![Releases][net-gateway-api-version-badge]][net-gateway-api-release-page]
+  - Latest Version [![Releases][net-gateway-api-version-badge]][net-gateway-api-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/net-http01](https://github.com/knative-sandbox/net-http01)
   - [ ] Dependencies up to date - [![releasabilty][net-http01-release-badge]][net-http01-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release [![Releases][net-http01-prow-badge]][net-http01-prow-job]
-	 - Latest Version [![Releases][net-http01-version-badge]][net-http01-release-page]
+  - Latest Version [![Releases][net-http01-version-badge]][net-http01-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/net-istio](https://github.com/knative-sandbox/net-istio)
   - [ ] Dependencies up to date - [![releasabilty][net-istio-release-badge]][net-istio-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
     - Prow Release [![Releases][net-istio-prow-badge]][net-istio-prow-job]
-	- Latest Version [![Releases][net-istio-version-badge]][net-istio-release-page]
+  - Latest Version [![Releases][net-istio-version-badge]][net-istio-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/net-kourier](https://github.com/knative-sandbox/net-kourier)
   - [ ] Dependencies up to date - [![releasabilty][net-kourier-release-badge]][net-kourier-release-workflow]
@@ -122,145 +128,151 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
   - [ ] Dependencies up to date - [![releasabilty][eventing-ceph-release-badge]][eventing-ceph-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][eventing-ceph-prow-badge]][eventing-ceph-prow-job]
+    - Prow Release Job [![Prow][eventing-ceph-prow-badge]][eventing-ceph-prow-job]
     - Latest Version [![Releases][eventing-ceph-version-badge]][eventing-ceph-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/eventing-kogito](https://github.com/knative-sandbox/eventing-kogito)
   - [ ] Dependencies up to date - [![releasabilty][eventing-kogito-release-badge]][eventing-kogito-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][eventing-kogito-prow-badge]][eventing-kogito-prow-job]
+    - Prow Release Job [![Prow][eventing-kogito-prow-badge]][eventing-kogito-prow-job]
     - Latest Version [![Releases][eventing-kogito-version-badge]][eventing-kogito-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/eventing-rabbitmq](https://github.com/knative-sandbox/eventing-rabbitmq)
   - [ ] Dependencies up to date - [![releasabilty][eventing-rabbitmq-release-badge]][eventing-rabbitmq-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][eventing-rabbitmq-prow-badge]][eventing-rabbitmq-prow-job]
+    - Prow Release Job [![Prow][eventing-rabbitmq-prow-badge]][eventing-rabbitmq-prow-job]
     - Latest Version [![Releases][eventing-rabbitmq-version-badge]][eventing-rabbitmq-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/sample-source](https://github.com/knative-sandbox/sample-source)
   - [ ] Dependencies up to date - [![releasabilty][sample-source-release-badge]][sample-source-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][sample-source-prow-badge]][sample-source-prow-job]
+    - Prow Release Job [![Prow][sample-source-prow-badge]][sample-source-prow-job]
     - Latest Version [![Releases][sample-source-version-badge]][sample-source-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 
-#### Phase 3 - Sub-Supporting Repositories  _(Can be started after `knative/eventing`  & `knative/serving` have been successfully released)_
+#### Phase 3 - Sub-Supporting Repositories _(Can be started after `knative/eventing` & `knative/serving` have been successfully released)_
 
 - [knative/client-pkg](https://github.com/knative/client-pkg)
   - [ ] Dependencies up to date - [![releasabilty][client-pkg-release-badge]][client-pkg-release-workflow]
   - [ ] Branch Cut
 
-#### Phase 4 - Client-pkg Dependant Repositories  _(Can be started after `knative/client-pkg` has been successfully released)_
+#### Phase 4 - Client-pkg Dependant Repositories _(Can be started after `knative/client-pkg` has been successfully released)_
+
 - [knative/client](https://github.com/knative/client)
   - [ ] Dependencies up to date - [![releasabilty][client-release-badge]][client-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][client-prow-badge]][client-prow-job]
+    - Prow Release Job [![Prow][client-prow-badge]][client-prow-job]
     - Latest Version [![Releases][client-version-badge]][client-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/eventing-kafka](https://github.com/knative-sandbox/eventing-kafka)
   - [ ] Dependencies up to date - [![releasabilty][eventing-kafka-release-badge]][eventing-kafka-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][eventing-kafka-prow-badge]][eventing-kafka-prow-job]
+    - Prow Release Job [![Prow][eventing-kafka-prow-badge]][eventing-kafka-prow-job]
     - Latest Version [![Releases][eventing-kafka-version-badge]][eventing-kafka-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/eventing-redis](https://github.com/knative-sandbox/eventing-redis)
   - [ ] Dependencies up to date - [![releasabilty][eventing-redis-release-badge]][eventing-redis-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][eventing-redis-prow-badge]][eventing-redis-prow-job]
+    - Prow Release Job [![Prow][eventing-redis-prow-badge]][eventing-redis-prow-job]
     - Latest Version [![Releases][eventing-redis-version-badge]][eventing-redis-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/eventing-github](https://github.com/knative-sandbox/eventing-github)
   - [ ] Dependencies up to date - [![releasabilty][eventing-github-release-badge]][eventing-github-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][eventing-github-prow-badge]][eventing-github-prow-job]
+    - Prow Release Job [![Prow][eventing-github-prow-badge]][eventing-github-prow-job]
     - Latest Version [![Releases][eventing-github-version-badge]][eventing-github-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/eventing-gitlab](https://github.com/knative-sandbox/eventing-gitlab)
   - [ ] Dependencies up to date - [![releasabilty][eventing-gitlab-release-badge]][eventing-gitlab-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][eventing-gitlab-prow-badge]][eventing-gitlab-prow-job]
+    - Prow Release Job [![Prow][eventing-gitlab-prow-badge]][eventing-gitlab-prow-job]
     - Latest Version [![Releases][eventing-gitlab-version-badge]][eventing-gitlab-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 
 #### Phase 5 - Remaining Repositories _(Can be started after all the previous repos has been successfully released)_
+
 - [knative-sandbox/eventing-kafka-broker](https://github.com/knative-sandbox/eventing-kafka-broker)
   - [ ] Dependencies up to date - [![releasabilty][eventing-kafka-broker-release-badge]][eventing-kafka-broker-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][eventing-kafka-broker-prow-badge]][eventing-kafka-broker-prow-job]
+    - Prow Release Job [![Prow][eventing-kafka-broker-prow-badge]][eventing-kafka-broker-prow-job]
     - Latest Version [![Releases][eventing-kafka-broker-version-badge]][eventing-kafka-broker-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/eventing-autoscaler-keda](https://github.com/knative-sandbox/eventing-autoscaler-keda)
   - [ ] Dependencies up to date - [![releasabilty][eventing-autoscaler-keda-release-badge]][eventing-autoscaler-keda-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][eventing-autoscaler-keda-prow-badge]][eventing-autoscaler-keda-prow-job]
+    - Prow Release Job [![Prow][eventing-autoscaler-keda-prow-badge]][eventing-autoscaler-keda-prow-job]
     - Latest Version [![Releases][eventing-autoscaler-keda-version-badge]][eventing-autoscaler-keda-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/kn-plugin-admin](https://github.com/knative-sandbox/kn-plugin-admin)
   - [ ] Dependencies up to date - [![releasabilty][kn-plugin-admin-release-badge]][kn-plugin-admin-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][kn-plugin-admin-prow-badge]][kn-plugin-admin-prow-job]
+    - Prow Release Job [![Prow][kn-plugin-admin-prow-badge]][kn-plugin-admin-prow-job]
     - Latest Version [![Releases][kn-plugin-admin-version-badge]][kn-plugin-admin-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/kn-plugin-event](https://github.com/knative-sandbox/kn-plugin-event)
   - [ ] Dependencies up to date - [![releasabilty][kn-plugin-event-release-badge]][kn-plugin-event-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][kn-plugin-event-prow-badge]][kn-plugin-event-prow-job]
+    - Prow Release Job [![Prow][kn-plugin-event-prow-badge]][kn-plugin-event-prow-job]
     - Latest Version [![Releases][kn-plugin-event-version-badge]][kn-plugin-event-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/kn-plugin-source-kafka](https://github.com/knative-sandbox/kn-plugin-source-kafka)
   - [ ] Dependencies up to date - [![releasabilty][kn-plugin-source-kafka-release-badge]][kn-plugin-source-kafka-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][kn-plugin-source-kafka-prow-badge]][kn-plugin-source-kafka-prow-job]
+    - Prow Release Job [![Prow][kn-plugin-source-kafka-prow-badge]][kn-plugin-source-kafka-prow-job]
     - Latest Version [![Releases][kn-plugin-source-kafka-version-badge]][kn-plugin-source-kafka-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/kn-plugin-source-kamelet](https://github.com/knative-sandbox/kn-plugin-source-kamelet)
   - [ ] Dependencies up to date - [![releasabilty][kn-plugin-source-kamelet-release-badge]][kn-plugin-source-kamelet-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][kn-plugin-source-kamelet-prow-badge]][kn-plugin-source-kamelet-prow-job]
+    - Prow Release Job [![Prow][kn-plugin-source-kamelet-prow-badge]][kn-plugin-source-kamelet-prow-job]
     - Latest Version [![Releases][kn-plugin-source-kamelet-version-badge]][kn-plugin-source-kamelet-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative-sandbox/kn-plugin-quickstart](https://github.com/knative-sandbox/kn-plugin-quickstart)
   - [ ] Dependencies up to date - [![releasabilty][kn-plugin-quickstart-release-badge]][kn-plugin-quickstart-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][kn-plugin-quickstart-prow-badge]][kn-plugin-quickstart-prow-job]
+    - Prow Release Job [![Prow][kn-plugin-quickstart-prow-badge]][kn-plugin-quickstart-prow-job]
     - Latest Version [![Releases][kn-plugin-quickstart-version-badge]][kn-plugin-quickstart-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 - [knative/func](https://github.com/knative/func)
   - [ ] Dependencies up to date - [![releasabilty][func-release-badge]][func-release-workflow]
   - [ ] Branch Cut
   - [ ] Release
-    - Prow Release Job  [![Prow][func-prow-badge]][func-prow-job]
+    - Prow Release Job [![Prow][func-prow-badge]][func-prow-job]
     - Latest Version [![Releases][func-version-badge]][func-release-page]
   - [ ] Release Notes ([run workflow][release-note-workflow])
 
 #### Final Phase
+
 - [ ] Talk to Vincent (Operator WG Lead) and have him cut (or help you cut) the [knative/operator](https://github.com/knative/operator)
+- [ ] Branch Cut
 - [ ] Knative Client Homebrew has been updated (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#homebrew-client))
 - [ ] Knative Client Plugins Homebrew has been updated (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#homebrew-kn-plugins))
 
 ### Post Release - after operator is cut
+
 - [ ] Release the knative.dev/docs (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#releasing-a-new-version-of-the-knative-documentation))
 - [ ] Release schedule has been updated in [RELEASE-SCHEDULE.md](https://github.com/knative/community/blob/main/mechanics/RELEASE-SCHEDULE.md) and [README.md](https://github.com/knative/release/blob/main/README.md)
 - [ ] Collect release notes into the blog post and publish it (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#updating-the-release-schedule))
 - [ ] Knobots update-deps job has been bumped to the next release version (see [procedure](https://github.com/knative/release/blob/main/PROCEDURES.md#bump-dependencies-in-auto-update-job))
-- [ ] An announcement was made in the [**#knative**](https://app.slack.com/client/T08PSQ7BQ/C04LGHDR9K7)  Slack channels that the new Knative release is out
+- [ ] An announcement was made in the [**#knative**](https://app.slack.com/client/T08PSQ7BQ/C04LGHDR9K7) Slack channels that the new Knative release is out
 
 <!-- autogen start -->
+
 [caching-version-badge]: https://img.shields.io/github/release-pre/knative/caching.svg?sort=semver
 [caching-release-badge]: https://github.com/knative/release/workflows/knative/caching/badge.svg
 [caching-release-page]: https://github.com/knative/caching/releases
@@ -269,7 +281,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [caching-nightly-page]: https://prow.knative.dev?job=nightly_caching_main_periodic
 [caching-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_caching_main_periodic
 [caching-prow-job]: https://prow.knative.dev?job=release_caching_main_periodic
-
 [client-version-badge]: https://img.shields.io/github/release-pre/knative/client.svg?sort=semver
 [client-release-badge]: https://github.com/knative/release/workflows/knative/client/badge.svg
 [client-release-page]: https://github.com/knative/client/releases
@@ -278,7 +289,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [client-nightly-page]: https://prow.knative.dev?job=nightly_client_main_periodic
 [client-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_client_main_periodic
 [client-prow-job]: https://prow.knative.dev?job=release_client_main_periodic
-
 [client-pkg-version-badge]: https://img.shields.io/github/release-pre/knative/client-pkg.svg?sort=semver
 [client-pkg-release-badge]: https://github.com/knative/release/workflows/knative/client-pkg/badge.svg
 [client-pkg-release-page]: https://github.com/knative/client-pkg/releases
@@ -287,7 +297,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [client-pkg-nightly-page]: https://prow.knative.dev?job=nightly_client-pkg_main_periodic
 [client-pkg-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_client-pkg_main_periodic
 [client-pkg-prow-job]: https://prow.knative.dev?job=release_client-pkg_main_periodic
-
 [eventing-version-badge]: https://img.shields.io/github/release-pre/knative/eventing.svg?sort=semver
 [eventing-release-badge]: https://github.com/knative/release/workflows/knative/eventing/badge.svg
 [eventing-release-page]: https://github.com/knative/eventing/releases
@@ -296,7 +305,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [eventing-nightly-page]: https://prow.knative.dev?job=nightly_eventing_main_periodic
 [eventing-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing_main_periodic
 [eventing-prow-job]: https://prow.knative.dev?job=release_eventing_main_periodic
-
 [func-version-badge]: https://img.shields.io/github/release-pre/knative/func.svg?sort=semver
 [func-release-badge]: https://github.com/knative/release/workflows/knative/func/badge.svg
 [func-release-page]: https://github.com/knative/func/releases
@@ -305,7 +313,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [func-nightly-page]: https://prow.knative.dev?job=nightly_func_main_periodic
 [func-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_func_main_periodic
 [func-prow-job]: https://prow.knative.dev?job=release_func_main_periodic
-
 [networking-version-badge]: https://img.shields.io/github/release-pre/knative/networking.svg?sort=semver
 [networking-release-badge]: https://github.com/knative/release/workflows/knative/networking/badge.svg
 [networking-release-page]: https://github.com/knative/networking/releases
@@ -314,7 +321,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [networking-nightly-page]: https://prow.knative.dev?job=nightly_networking_main_periodic
 [networking-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_networking_main_periodic
 [networking-prow-job]: https://prow.knative.dev?job=release_networking_main_periodic
-
 [pkg-version-badge]: https://img.shields.io/github/release-pre/knative/pkg.svg?sort=semver
 [pkg-release-badge]: https://github.com/knative/release/workflows/knative/pkg/badge.svg
 [pkg-release-page]: https://github.com/knative/pkg/releases
@@ -323,7 +329,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [pkg-nightly-page]: https://prow.knative.dev?job=nightly_pkg_main_periodic
 [pkg-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_pkg_main_periodic
 [pkg-prow-job]: https://prow.knative.dev?job=release_pkg_main_periodic
-
 [serving-version-badge]: https://img.shields.io/github/release-pre/knative/serving.svg?sort=semver
 [serving-release-badge]: https://github.com/knative/release/workflows/knative/serving/badge.svg
 [serving-release-page]: https://github.com/knative/serving/releases
@@ -332,7 +337,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [serving-nightly-page]: https://prow.knative.dev?job=nightly_serving_main_periodic
 [serving-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_serving_main_periodic
 [serving-prow-job]: https://prow.knative.dev?job=release_serving_main_periodic
-
 [operator-version-badge]: https://img.shields.io/github/release-pre/knative/operator.svg?sort=semver
 [operator-release-badge]: https://github.com/knative/release/workflows/knative/operator/badge.svg
 [operator-release-page]: https://github.com/knative/operator/releases
@@ -341,7 +345,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [operator-nightly-page]: https://prow.knative.dev?job=nightly_operator_main_periodic
 [operator-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_operator_main_periodic
 [operator-prow-job]: https://prow.knative.dev?job=release_operator_main_periodic
-
 [control-protocol-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/control-protocol.svg?sort=semver
 [control-protocol-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/control-protocol/badge.svg
 [control-protocol-release-page]: https://github.com/knative-sandbox/control-protocol/releases
@@ -350,7 +353,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [control-protocol-nightly-page]: https://prow.knative.dev?job=nightly_control-protocol_main_periodic
 [control-protocol-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_control-protocol_main_periodic
 [control-protocol-prow-job]: https://prow.knative.dev?job=release_control-protocol_main_periodic
-
 [eventing-autoscaler-keda-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-autoscaler-keda.svg?sort=semver
 [eventing-autoscaler-keda-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-autoscaler-keda/badge.svg
 [eventing-autoscaler-keda-release-page]: https://github.com/knative-sandbox/eventing-autoscaler-keda/releases
@@ -359,7 +361,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [eventing-autoscaler-keda-nightly-page]: https://prow.knative.dev?job=nightly_eventing-autoscaler-keda_main_periodic
 [eventing-autoscaler-keda-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-autoscaler-keda_main_periodic
 [eventing-autoscaler-keda-prow-job]: https://prow.knative.dev?job=release_eventing-autoscaler-keda_main_periodic
-
 [eventing-ceph-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-ceph.svg?sort=semver
 [eventing-ceph-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-ceph/badge.svg
 [eventing-ceph-release-page]: https://github.com/knative-sandbox/eventing-ceph/releases
@@ -368,7 +369,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [eventing-ceph-nightly-page]: https://prow.knative.dev?job=nightly_eventing-ceph_main_periodic
 [eventing-ceph-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-ceph_main_periodic
 [eventing-ceph-prow-job]: https://prow.knative.dev?job=release_eventing-ceph_main_periodic
-
 [eventing-github-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-github.svg?sort=semver
 [eventing-github-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-github/badge.svg
 [eventing-github-release-page]: https://github.com/knative-sandbox/eventing-github/releases
@@ -377,7 +377,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [eventing-github-nightly-page]: https://prow.knative.dev?job=nightly_eventing-github_main_periodic
 [eventing-github-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-github_main_periodic
 [eventing-github-prow-job]: https://prow.knative.dev?job=release_eventing-github_main_periodic
-
 [eventing-gitlab-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-gitlab.svg?sort=semver
 [eventing-gitlab-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-gitlab/badge.svg
 [eventing-gitlab-release-page]: https://github.com/knative-sandbox/eventing-gitlab/releases
@@ -386,7 +385,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [eventing-gitlab-nightly-page]: https://prow.knative.dev?job=nightly_eventing-gitlab_main_periodic
 [eventing-gitlab-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-gitlab_main_periodic
 [eventing-gitlab-prow-job]: https://prow.knative.dev?job=release_eventing-gitlab_main_periodic
-
 [eventing-kafka-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-kafka.svg?sort=semver
 [eventing-kafka-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-kafka/badge.svg
 [eventing-kafka-release-page]: https://github.com/knative-sandbox/eventing-kafka/releases
@@ -395,7 +393,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [eventing-kafka-nightly-page]: https://prow.knative.dev?job=nightly_eventing-kafka_main_periodic
 [eventing-kafka-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-kafka_main_periodic
 [eventing-kafka-prow-job]: https://prow.knative.dev?job=release_eventing-kafka_main_periodic
-
 [eventing-kafka-broker-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-kafka-broker.svg?sort=semver
 [eventing-kafka-broker-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-kafka-broker/badge.svg
 [eventing-kafka-broker-release-page]: https://github.com/knative-sandbox/eventing-kafka-broker/releases
@@ -404,7 +401,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [eventing-kafka-broker-nightly-page]: https://prow.knative.dev?job=nightly_eventing-kafka-broker_main_periodic
 [eventing-kafka-broker-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-kafka-broker_main_periodic
 [eventing-kafka-broker-prow-job]: https://prow.knative.dev?job=release_eventing-kafka-broker_main_periodic
-
 [eventing-kogito-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-kogito.svg?sort=semver
 [eventing-kogito-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-kogito/badge.svg
 [eventing-kogito-release-page]: https://github.com/knative-sandbox/eventing-kogito/releases
@@ -413,7 +409,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [eventing-kogito-nightly-page]: https://prow.knative.dev?job=nightly_eventing-kogito_main_periodic
 [eventing-kogito-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-kogito_main_periodic
 [eventing-kogito-prow-job]: https://prow.knative.dev?job=release_eventing-kogito_main_periodic
-
 [eventing-rabbitmq-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-rabbitmq.svg?sort=semver
 [eventing-rabbitmq-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-rabbitmq/badge.svg
 [eventing-rabbitmq-release-page]: https://github.com/knative-sandbox/eventing-rabbitmq/releases
@@ -422,7 +417,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [eventing-rabbitmq-nightly-page]: https://prow.knative.dev?job=nightly_eventing-rabbitmq_main_periodic
 [eventing-rabbitmq-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-rabbitmq_main_periodic
 [eventing-rabbitmq-prow-job]: https://prow.knative.dev?job=release_eventing-rabbitmq_main_periodic
-
 [eventing-redis-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/eventing-redis.svg?sort=semver
 [eventing-redis-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/eventing-redis/badge.svg
 [eventing-redis-release-page]: https://github.com/knative-sandbox/eventing-redis/releases
@@ -431,7 +425,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [eventing-redis-nightly-page]: https://prow.knative.dev?job=nightly_eventing-redis_main_periodic
 [eventing-redis-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_eventing-redis_main_periodic
 [eventing-redis-prow-job]: https://prow.knative.dev?job=release_eventing-redis_main_periodic
-
 [kn-plugin-admin-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-admin.svg?sort=semver
 [kn-plugin-admin-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/kn-plugin-admin/badge.svg
 [kn-plugin-admin-release-page]: https://github.com/knative-sandbox/kn-plugin-admin/releases
@@ -440,7 +433,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [kn-plugin-admin-nightly-page]: https://prow.knative.dev?job=nightly_kn-plugin-admin_main_periodic
 [kn-plugin-admin-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_kn-plugin-admin_main_periodic
 [kn-plugin-admin-prow-job]: https://prow.knative.dev?job=release_kn-plugin-admin_main_periodic
-
 [kn-plugin-event-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-event.svg?sort=semver
 [kn-plugin-event-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/kn-plugin-event/badge.svg
 [kn-plugin-event-release-page]: https://github.com/knative-sandbox/kn-plugin-event/releases
@@ -449,7 +441,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [kn-plugin-event-nightly-page]: https://prow.knative.dev?job=nightly_kn-plugin-event_main_periodic
 [kn-plugin-event-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_kn-plugin-event_main_periodic
 [kn-plugin-event-prow-job]: https://prow.knative.dev?job=release_kn-plugin-event_main_periodic
-
 [kn-plugin-quickstart-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-quickstart.svg?sort=semver
 [kn-plugin-quickstart-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/kn-plugin-quickstart/badge.svg
 [kn-plugin-quickstart-release-page]: https://github.com/knative-sandbox/kn-plugin-quickstart/releases
@@ -458,7 +449,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [kn-plugin-quickstart-nightly-page]: https://prow.knative.dev?job=nightly_kn-plugin-quickstart_main_periodic
 [kn-plugin-quickstart-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_kn-plugin-quickstart_main_periodic
 [kn-plugin-quickstart-prow-job]: https://prow.knative.dev?job=release_kn-plugin-quickstart_main_periodic
-
 [kn-plugin-source-kafka-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-source-kafka.svg?sort=semver
 [kn-plugin-source-kafka-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/kn-plugin-source-kafka/badge.svg
 [kn-plugin-source-kafka-release-page]: https://github.com/knative-sandbox/kn-plugin-source-kafka/releases
@@ -467,7 +457,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [kn-plugin-source-kafka-nightly-page]: https://prow.knative.dev?job=nightly_kn-plugin-source-kafka_main_periodic
 [kn-plugin-source-kafka-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_kn-plugin-source-kafka_main_periodic
 [kn-plugin-source-kafka-prow-job]: https://prow.knative.dev?job=release_kn-plugin-source-kafka_main_periodic
-
 [kn-plugin-source-kamelet-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/kn-plugin-source-kamelet.svg?sort=semver
 [kn-plugin-source-kamelet-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/kn-plugin-source-kamelet/badge.svg
 [kn-plugin-source-kamelet-release-page]: https://github.com/knative-sandbox/kn-plugin-source-kamelet/releases
@@ -476,7 +465,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [kn-plugin-source-kamelet-nightly-page]: https://prow.knative.dev?job=nightly_kn-plugin-source-kamelet_main_periodic
 [kn-plugin-source-kamelet-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_kn-plugin-source-kamelet_main_periodic
 [kn-plugin-source-kamelet-prow-job]: https://prow.knative.dev?job=release_kn-plugin-source-kamelet_main_periodic
-
 [net-certmanager-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/net-certmanager.svg?sort=semver
 [net-certmanager-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/net-certmanager/badge.svg
 [net-certmanager-release-page]: https://github.com/knative-sandbox/net-certmanager/releases
@@ -485,7 +473,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [net-certmanager-nightly-page]: https://prow.knative.dev?job=nightly_net-certmanager_main_periodic
 [net-certmanager-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_net-certmanager_main_periodic
 [net-certmanager-prow-job]: https://prow.knative.dev?job=release_net-certmanager_main_periodic
-
 [net-contour-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/net-contour.svg?sort=semver
 [net-contour-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/net-contour/badge.svg
 [net-contour-release-page]: https://github.com/knative-sandbox/net-contour/releases
@@ -494,7 +481,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [net-contour-nightly-page]: https://prow.knative.dev?job=nightly_net-contour_main_periodic
 [net-contour-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_net-contour_main_periodic
 [net-contour-prow-job]: https://prow.knative.dev?job=release_net-contour_main_periodic
-
 [net-gateway-api-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/net-gateway-api.svg?sort=semver
 [net-gateway-api-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/net-gateway-api/badge.svg
 [net-gateway-api-release-page]: https://github.com/knative-sandbox/net-gateway-api/releases
@@ -503,7 +489,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [net-gateway-api-nightly-page]: https://prow.knative.dev?job=nightly_net-gateway-api_main_periodic
 [net-gateway-api-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_net-gateway-api_main_periodic
 [net-gateway-api-prow-job]: https://prow.knative.dev?job=release_net-gateway-api_main_periodic
-
 [net-http01-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/net-http01.svg?sort=semver
 [net-http01-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/net-http01/badge.svg
 [net-http01-release-page]: https://github.com/knative-sandbox/net-http01/releases
@@ -512,7 +497,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [net-http01-nightly-page]: https://prow.knative.dev?job=nightly_net-http01_main_periodic
 [net-http01-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_net-http01_main_periodic
 [net-http01-prow-job]: https://prow.knative.dev?job=release_net-http01_main_periodic
-
 [net-istio-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/net-istio.svg?sort=semver
 [net-istio-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/net-istio/badge.svg
 [net-istio-release-page]: https://github.com/knative-sandbox/net-istio/releases
@@ -521,7 +505,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [net-istio-nightly-page]: https://prow.knative.dev?job=nightly_net-istio_main_periodic
 [net-istio-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_net-istio_main_periodic
 [net-istio-prow-job]: https://prow.knative.dev?job=release_net-istio_main_periodic
-
 [net-kourier-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/net-kourier.svg?sort=semver
 [net-kourier-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/net-kourier/badge.svg
 [net-kourier-release-page]: https://github.com/knative-sandbox/net-kourier/releases
@@ -530,7 +513,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [net-kourier-nightly-page]: https://prow.knative.dev?job=nightly_net-kourier_main_periodic
 [net-kourier-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_net-kourier_main_periodic
 [net-kourier-prow-job]: https://prow.knative.dev?job=release_net-kourier_main_periodic
-
 [reconciler-test-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/reconciler-test.svg?sort=semver
 [reconciler-test-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/reconciler-test/badge.svg
 [reconciler-test-release-page]: https://github.com/knative-sandbox/reconciler-test/releases
@@ -539,7 +521,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [reconciler-test-nightly-page]: https://prow.knative.dev?job=nightly_reconciler-test_main_periodic
 [reconciler-test-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_reconciler-test_main_periodic
 [reconciler-test-prow-job]: https://prow.knative.dev?job=release_reconciler-test_main_periodic
-
 [sample-controller-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/sample-controller.svg?sort=semver
 [sample-controller-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/sample-controller/badge.svg
 [sample-controller-release-page]: https://github.com/knative-sandbox/sample-controller/releases
@@ -548,7 +529,6 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [sample-controller-nightly-page]: https://prow.knative.dev?job=nightly_sample-controller_main_periodic
 [sample-controller-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_sample-controller_main_periodic
 [sample-controller-prow-job]: https://prow.knative.dev?job=release_sample-controller_main_periodic
-
 [sample-source-version-badge]: https://img.shields.io/github/release-pre/knative-sandbox/sample-source.svg?sort=semver
 [sample-source-release-badge]: https://github.com/knative/release/workflows/knative-sandbox/sample-source/badge.svg
 [sample-source-release-page]: https://github.com/knative-sandbox/sample-source/releases
@@ -557,5 +537,4 @@ Please review the [TIMELINE](https://github.com/knative/release/blob/main/TIMELI
 [sample-source-nightly-page]: https://prow.knative.dev?job=nightly_sample-source_main_periodic
 [sample-source-prow-badge]: https://prow.knative.dev/badge.svg?jobs=release_sample-source_main_periodic
 [sample-source-prow-job]: https://prow.knative.dev?job=release_sample-source_main_periodic
-
 [release-note-workflow]: https://github.com/knative/release/actions/workflows/release-note.yaml
